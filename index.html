@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Coding Quiz</title>
+
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+	<div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+	<div class="timer">Time: <span id="timer">0</span></div>
+
+	<div class="wrapper">
+		<div id="start-screen" class="start">
+			<h1>Coding Quiz Challenge</h1>
+			<p>
+				Try to answer the following code-related questions within the time
+				limit. Keep in mind that incorrect answers will penalize your
+				score/time by ten seconds!
+			</p>
+			<button id="start">Start Quiz</button>
+		</div>
+
+		<div id="quiz-questions" class="hide">
+			<h2 id="question-title"></h2>
+			<div id="answer-choices" class="choices"></div>
+		</div>
+		<section id="game-over" class="hide">
+			<div id="end-screen">
+				<h2 id="end-message">All done!</h2>
+				<p><span id="final-score"></span></p>
+
+				<input type="text" id="input" placeholder="Enter initials:" max="3" aria-label="Player's Initials">
+				<button class="button" type="button" id="high-scores-button">Submit</button>
+
+			</div>
+		</section>
+
+
+		<div id="feedback" class="feedback hide"></div>
+	</div>
+
+	<script src="./questions.js"></script>
+	<script src="./logic.js"></script>
+</body>
+</html>
